@@ -355,7 +355,8 @@
   /* ================= Cabecera ================= */
   function renderHeader() {
     var st = S.state, n = S.perDraw();
-    ui.title.textContent = st.settings.title || 'Gran Sorteo';
+    // El título es opcional: si se quita de la cabecera, el resto de la interfaz sigue funcionando.
+    if (ui.title) ui.title.textContent = st.settings.title || 'Gran Sorteo';
     ui.statPool.textContent = S.pool().length;
     ui.statWinners.textContent = st.winners.length;
     var prizes = [];
