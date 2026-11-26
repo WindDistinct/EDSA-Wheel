@@ -506,3 +506,5 @@ body.is-drawing .fairness { opacity: 0; }
 .reveal-grid[data-size="s"] .tile-absent, .reveal-grid[data-size="xs"] .tile-absent { opacity: 0; background: #FFFFFF; box-shadow: 0 2px 8px rgba(21, 57, 128, .15); }
 .reveal-grid[data-size="s"] .tile:hover .tile-absent, .reveal-grid[data-size="xs"] .tile:hover .tile-absent { opacity: 1; }
 .reveal-grid[data-size="xs"] .tile { padding: .55rem .7rem .55rem .6rem; gap: .6rem; }
+.badge--dot { padding: 3px; }
+.badge--dot::before { width: 12px; height: 12px; }

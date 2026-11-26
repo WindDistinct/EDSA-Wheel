@@ -103,7 +103,7 @@
   function exportWinners(winners, absent) {
     var stamp = new Date().toISOString().slice(0, 16).replace(/[:T]/g, '-');
     var rows = winners.map(function (w, i) {
-      return { '#': i + 1, 'Nombre': w.name, 'Empresa / detalle': w.detail, 'Premio': w.prize, 'Línea': w.line, 'Hora': new Date(w.at).toLocaleString('es-PE') };
+      return { '#': i + 1, 'Nombre': w.name, 'Empresa / detalle': w.detail, 'Premio': w.prize, 'Línea': w.line || w.lineId || '', 'Hora': new Date(w.at).toLocaleString('es-PE') };
     });
     if (typeof XLSX !== 'undefined') {
       var wb = XLSX.utils.book_new();

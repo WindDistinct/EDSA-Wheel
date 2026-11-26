@@ -115,7 +115,7 @@
     addWinners: function (items) {
       var at = new Date().toISOString();
       items.forEach(function (it) {
-        state.winners.push({ id: it.person.id, name: it.person.name, detail: it.person.detail || '', prize: it.prize || '', line: it.line || '', at: at });
+        state.winners.push({ id: it.person.id, name: it.person.name, detail: it.person.detail || '', prize: it.prize || '', line: it.line || '', lineId: it.lineId || '', at: at });
       });
       save();
     },

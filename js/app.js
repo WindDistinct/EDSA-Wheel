@@ -131,7 +131,7 @@
     var ri = 0, lastFlip = 0;
 
     ui.board.style.setProperty('--line', line.color);
-    setBoard('Línea ' + line.name + ' · en ruta', 'Saliendo de la estación…', line.tagline);
+    setBoard(line.name ? 'Línea ' + line.name + ' · en ruta' : 'En ruta', 'Saliendo de la estación…', line.tagline || '');
 
     Network.run(li, baseDuration(), {
       onProgress: function (u, v) {
@@ -252,7 +252,7 @@
     route.appendChild(h('span', 'dot'));
     route.appendChild(h('span', null, multi
       ? 'Tirada de ' + n + ' ganadores  ·  Sorteos N.º ' + first + ' al ' + (first + n - 1)
-      : 'Línea ' + batch[0].line.name + '  ·  Sorteo N.º ' + first));
+      : (batch[0].line.name ? 'Línea ' + batch[0].line.name + '  ·  ' : '') + 'Sorteo N.º ' + first));
 
     $('revealKicker').textContent = multi ? '¡Felicitaciones a los ' + n + ' ganadores!' : '¡Felicitaciones!';
     $('confirmLabel').textContent = multi ? 'Confirmar los ' + n + ' ganadores' : 'Confirmar ganador';
@@ -338,7 +338,7 @@
 
   function confirmWinner() {
     if (!current) return;
-    S.addWinners(current.map(function (c) { return { person: c.person, prize: c.prize, line: c.line.name }; }));
+    S.addWinners(current.map(function (c) { return { person: c.person, prize: c.prize, line: c.line.name, lineId: c.line.id }; }));
     current = null;
     closeReveal().then(idleBoard);
   }
@@ -429,14 +429,15 @@
     list.innerHTML = '';
     st.winners.forEach(function (w, i) {
       var li = h('li', 'person');
-      var line = LINES.filter(function (l) { return l.name === w.line; })[0];
+      // Se busca por id (estable); por nombre solo para ganadores guardados antes de este cambio.
+      var line = LINES.filter(function (l) { return w.lineId ? l.id === w.lineId : (w.line && l.name === w.line); })[0];
       li.appendChild(h('span', 'person-n', String(i + 1)));
       var main = h('span', 'person-main');
       main.appendChild(h('span', 'person-name', w.name));
       var meta = [w.detail, w.prize && ('Premio: ' + w.prize), new Date(w.at).toLocaleTimeString('es-PE', { hour: '2-digit', minute: '2-digit' })].filter(Boolean).join('  ·  ');
       main.appendChild(h('span', 'person-detail', meta));
       li.appendChild(main);
-      if (line) { var b = h('span', 'badge badge--line', line.name); b.style.setProperty('--line', line.color); li.appendChild(b); }
+      if (line) { var b = h('span', 'badge badge--line' + (line.name ? '' : ' badge--dot'), line.name); b.style.setProperty('--line', line.color); li.appendChild(b); }
       var x = h('button', 'x-btn', '×');
       x.title = 'Anular este resultado (vuelve al sorteo)';
       x.dataset.unwin = i;

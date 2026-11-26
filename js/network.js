@@ -117,7 +117,7 @@
       var og = el('g', { 'class': 'origin', transform: 'translate(' + o[0] + ' ' + o[1] + ')' }, g);
       el('circle', { r: 30, fill: '#0B1F4D', stroke: line.color, 'stroke-width': 5 }, og);
       var ic = el('svg', { x: -15, y: -15, width: 30, height: 30, viewBox: '0 0 24 24', color: line.color }, og);
-      ic.innerHTML = ICONS[line.icon];
+      ic.innerHTML = ICONS[line.icon] || '';
 
       // Etiqueta tipo "pill" del manual del evento
       var lb = el('g', { 'class': 'line-label', transform: 'translate(' + line.label.x + ' ' + line.label.y + ')' }, g);
