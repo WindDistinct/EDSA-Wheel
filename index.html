@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sorteo · EDSA Mobility Experience</title>
+  <link rel="icon" href="assets/logo/edsa-icono.svg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app" id="app">
+
+    <!-- ============ CABECERA ============ -->
+    <header class="topbar">
+      <img class="brand" src="assets/logo/edsa-mobility-white.png" alt="EDSA Mobility Experience">
+      <div class="title">
+        <span class="title-kicker">Mobility Experience 2026</span>
+      </div>
+      <div class="top-actions">
+        <div class="stat"><span class="stat-num" id="statPool">0</span><span class="stat-label">en el sorteo</span></div>
+        <div class="stat stat--accent"><span class="stat-num" id="statWinners">0</span><span class="stat-label">ganadores</span></div>
+        <button class="icon-btn" id="btnSound" title="Sonido (M)" aria-label="Activar o silenciar sonido">
+          <svg viewBox="0 0 24 24"><path class="snd-on" d="M4 9h4l5-4v14l-5-4H4zM16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12"/><path class="snd-off" d="M4 9h4l5-4v14l-5-4H4zM17 9l5 6M22 9l-5 6"/></svg>
+        </button>
+        <button class="icon-btn" id="btnFullscreen" title="Pantalla completa (F)" aria-label="Pantalla completa">
+          <svg viewBox="0 0 24 24"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg>
+        </button>
+        <button class="icon-btn" id="btnSettings" title="Configuración (C)" aria-label="Configuración">
+          <svg viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- ============ MAPA DE RED ============ -->
+    <main class="stage" id="stage">
+      <svg id="network" viewBox="0 0 1600 760" preserveAspectRatio="xMidYMid meet" aria-hidden="true"></svg>
+      <div class="tally" id="tally" hidden aria-live="polite"></div>
+    </main>
+
+    <!-- ============ TABLERO + BOTÓN ============ -->
+    <footer class="console">
+      <div class="board" id="board">
+        <div class="board-led"><span></span><span></span><span></span></div>
+        <div class="board-main">
+          <div class="board-label" id="boardLabel">Próxima parada</div>
+          <div class="board-name" id="boardName">Listos para sortear</div>
+          <div class="board-detail" id="boardDetail">&nbsp;</div>
+        </div>
+        <div class="board-prize" id="boardPrize" hidden>
+          <span class="board-label" id="boardPrizeLabel">Premio</span>
+          <span class="board-prize-name" id="boardPrizeName"></span>
+        </div>
+      </div>
+      <button class="draw-btn" id="btnDraw">
+        <span class="draw-btn-label">Sortear</span>
+        <span class="draw-btn-hint" id="drawHint">Barra espaciadora</span>
+      </button>
+    </footer>
+  </div>
+
+  <!-- ============ REVELACIÓN DEL GANADOR ============ -->
+  <section class="reveal" id="reveal" hidden aria-live="assertive">
+    <div class="reveal-card">
+      <div class="reveal-route" id="revealRoute"></div>
+      <p class="reveal-kicker" id="revealKicker">¡Felicitaciones!</p>
+      <div class="reveal-single">
+        <h2 class="reveal-name" id="revealName"></h2>
+        <p class="reveal-detail" id="revealDetail"></p>
+        <p class="reveal-prize" id="revealPrize"></p>
+      </div>
+      <div class="reveal-grid" id="revealGrid"></div>
+      <div class="reveal-actions">
+        <button class="btn btn--primary" id="btnConfirm"><span id="confirmLabel">Confirmar ganador</span> <kbd>Enter</kbd></button>
+        <button class="btn btn--ghost" id="btnAbsent">No está presente · sortear de nuevo</button>
+      </div>
+    </div>
+  </section>
+
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <!-- ============ CONFIGURACIÓN ============ -->
+  <dialog class="settings" id="settings">
+    <form method="dialog" class="settings-head">
+      <img src="assets/logo/edsa-imagotipo.svg" alt="" class="settings-logo">
+      <div>
+        <h2>Configuración del sorteo</h2>
+        <p>Los datos se guardan en este navegador. Puedes recargar la página sin perder la lista ni los ganadores.</p>
+      </div>
+      <button class="icon-btn icon-btn--dark" value="close" aria-label="Cerrar"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </form>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab is-active" data-tab="tabParticipants" role="tab">Participantes <span class="tab-count" id="tabCountP">0</span></button>
+      <button class="tab" data-tab="tabImport" role="tab">Cargar lista</button>
+      <button class="tab" data-tab="tabOptions" role="tab">Premios y opciones</button>
+      <button class="tab" data-tab="tabWinners" role="tab">Ganadores <span class="tab-count" id="tabCountW">0</span></button>
+    </nav>
+
+    <!-- Participantes -->
+    <div class="tab-panel is-active" id="tabParticipants">
+      <div class="row row--between">
+        <input type="search" class="input" id="searchP" placeholder="Buscar participante…">
+        <div class="row">
+          <button class="btn btn--small btn--ghost-dark" id="btnClearP">Vaciar lista</button>
+        </div>
+      </div>
+      <p class="hint" id="poolSummary"></p>
+      <ul class="people" id="listP"></ul>
+    </div>
+
+    <!-- Importar -->
+    <div class="tab-panel" id="tabImport">
+      <div class="import-grid">
+        <section class="card">
+          <h3>Desde hoja de cálculo</h3>
+          <p class="hint">Excel (.xlsx, .xls), .ods o .csv. Elige luego qué columnas usar.</p>
+          <label class="dropzone" id="dropzone">
+            <input type="file" id="fileInput" accept=".xlsx,.xls,.xlsm,.ods,.csv,.tsv,.txt">
+            <strong>Arrastra el archivo aquí</strong>
+            <span>o haz clic para buscarlo</span>
+          </label>
+          <div class="mapping" id="mapping" hidden>
+            <div class="mapping-file" id="mappingFile"></div>
+            <label class="field" id="fieldSheet"><span>Hoja</span><select class="input" id="selSheet"></select></label>
+            <label class="check"><input type="checkbox" id="chkHeader" checked> La primera fila es el encabezado</label>
+            <div class="field-row">
+              <label class="field"><span>Nombre *</span><select class="input" id="selName"></select></label>
+              <label class="field"><span>Apellidos (opcional)</span><select class="input" id="selLast"></select></label>
+              <label class="field"><span>Dato secundario (opcional)</span><select class="input" id="selDetail"></select></label>
+            </div>
+          </div>
+        </section>
+        <section class="card">
+          <h3>Pegar texto</h3>
+          <p class="hint">Un participante por línea. Para agregar empresa o área, sepáralo con tabulación (copiar desde Excel), <code>;</code> o <code>|</code>.</p>
+          <textarea class="input textarea" id="pasteInput" spellcheck="false" placeholder="Ana Torres; Transportes del Sur&#10;Luis Mendoza; Municipalidad de Lima&#10;María Quispe"></textarea>
+        </section>
+      </div>
+      <div class="import-preview card" id="importPreview" hidden>
+        <div>
+          <strong id="previewCount"></strong>
+          <span class="hint" id="previewNotes"></span>
+          <div class="chips" id="previewSample"></div>
+        </div>
+        <div class="row">
+          <button class="btn btn--ghost-dark" id="btnAppend">Agregar a la lista actual</button>
+          <button class="btn btn--primary" id="btnReplace">Reemplazar lista</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Opciones -->
+    <div class="tab-panel" id="tabOptions">
+      <div class="import-grid">
+        <section class="card">
+          <h3>Premios</h3>
+          <p class="hint">Opcional. Uno por línea, en el orden en que se sortean. Se muestra en pantalla el premio en juego.</p>
+          <textarea class="input textarea" id="prizesInput" placeholder="Smart TV 55&quot;&#10;Laptop&#10;Audífonos inalámbricos"></textarea>
+        </section>
+        <section class="card">
+          <h3>Pantalla y animación</h3>
+          <label class="field"><span>Título en pantalla</span><input class="input" id="titleInput" maxlength="40"></label>
+          <label class="field"><span>Ganadores por tirada</span>
+            <input class="input input--num" id="perDrawInput" type="number" min="1" max="200" step="1" inputmode="numeric">
+          </label>
+          <p class="hint">Con 1, un bus recorre la línea completa. Con más, sale una flota escalonada y al final se muestran todos los ganadores juntos. Cada uno toma el siguiente premio de la lista.</p>
+          <label class="field"><span>Duración del recorrido</span>
+            <select class="input" id="durationInput">
+              <option value="6">Corta · 6 s</option>
+              <option value="9">Normal · 9 s</option>
+              <option value="13">Suspenso · 13 s</option>
+            </select>
+          </label>
+          <label class="check"><input type="checkbox" id="chkRemove"> Retirar a los ganadores del sorteo (no pueden ganar dos veces)</label>
+          <label class="check"><input type="checkbox" id="chkSound"> Sonidos</label>
+        </section>
+      </div>
+    </div>
+
+    <!-- Ganadores -->
+    <div class="tab-panel" id="tabWinners">
+      <div class="row row--between">
+        <p class="hint" id="winnersSummary"></p>
+        <div class="row">
+          <button class="btn btn--small btn--ghost-dark" id="btnResetDraw">Reiniciar sorteo</button>
+          <button class="btn btn--small btn--primary" id="btnExport">Exportar a Excel</button>
+        </div>
+      </div>
+      <ol class="people people--winners" id="listW"></ol>
+      <h4 class="subhead" id="absentHead" hidden>Marcados como ausentes</h4>
+      <ul class="people" id="listA"></ul>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="vendor/xlsx.full.min.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/importer.js"></script>
+  <script src="js/fx.js"></script>
+  <script src="js/network.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

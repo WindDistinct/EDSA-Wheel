@@ -1,0 +1,236 @@
+Andrés Salazar Rodríguez; MTC
+Claudia Flores Muñoz; Tránsito Inteligente
+Juan Zegarra Núñez; Municipalidad de Lima
+Miguel Espinoza Sánchez; Tránsito Inteligente
+Carlos Mamani Aguilar; Teleflota Perú
+Fernando Aguilar García; Flota Norte SAC
+Fiorella Torres García; Teleflota Perú
+Miguel Salazar Ramírez; ATU
+Valeria Mendoza Flores; Ruta Segura
+Iván Gutiérrez Chávez; Expreso Pacífico
+Paola Núñez Sánchez; MTC
+José Mamani Castillo; Municipalidad de Arequipa
+Silvia Ramírez Huamán; Recaudo Digital
+Hugo Huamán Huamán; MTC
+César Rodríguez Torres; EDSA
+Silvia Benavides Ortiz; EDSA
+Milagros Quispe Ramírez; Movilidad Andina
+Ricardo Espinoza Ccori; Corredor Rojo
+Ana Mendoza Cárdenas; Flota Norte SAC
+Gonzalo Huamán Muñoz; Tránsito Inteligente
+Jorge Zegarra Muñoz; MTC
+Rosa Valdivia Espinoza; Expreso Pacífico
+Miguel Peña García; Transportes del Sur
+Ana Salazar Peña; Buses Metropolitanos
+Andrés Mamani Torres; Recaudo Digital
+Valeria Rojas Torres; EDSA
+Rosa Quispe Paredes; Municipalidad de Lima
+Carmen Gutiérrez Castillo; Transportes del Sur
+Daniela Ccori Mendoza; Ruta Segura
+Víctor Torres Mendoza; Municipalidad de Lima
+José Flores García; Corredor Rojo
+Elena Huamán Vargas; Tránsito Inteligente
+Raúl Castillo Rodríguez; Ruta Segura
+Andrés Benavides Espinoza; Flota Norte SAC
+Iván Castillo Gutiérrez; Municipalidad de Arequipa
+Karina Salazar Tapia; Expreso Pacífico
+Fernando Flores Tapia; Tránsito Inteligente
+Ricardo Ccori Zegarra; Recaudo Digital
+Iván Valdivia Mamani; Movilidad Andina
+Gonzalo Núñez Sánchez; Municipalidad de Arequipa
+Lucía Ríos Ramírez; Transportes del Sur
+Claudia Mamani Vargas; ATU
+Miguel Ccori Ramírez; Ruta Segura
+Ricardo Peña García; Movilidad Andina
+Iván Cárdenas Flores; ATU
+Patricia Castillo Ríos; Corredor Rojo
+María Ccori Huamán; Tránsito Inteligente
+Carmen Castillo Rojas; Movilidad Andina
+Jorge Valdivia Ortiz; Transportes del Sur
+Juan Mendoza Rojas; Municipalidad de Arequipa
+Miguel Paredes Muñoz; Teleflota Perú
+Pedro Peña Castillo; Municipalidad de Lima
+Jorge Valdivia Cárdenas; Teleflota Perú
+Valeria Ramírez Sánchez; Ruta Segura
+Renzo Valdivia Torres; Tránsito Inteligente
+Natalia Aguilar Paredes; Movilidad Andina
+Milagros Cárdenas Rodríguez; Movilidad Andina
+César Ríos Ríos; Expreso Pacífico
+José Sánchez Vargas; Ruta Segura
+Karina Huamán Ortiz; Flota Norte SAC
+Iván Mendoza Chávez; MTC
+Valeria Mendoza Tapia; Buses Metropolitanos
+Raúl Mamani Huamán; ATU
+Sofía Chávez Ríos; Tránsito Inteligente
+Óscar Núñez Gutiérrez; Municipalidad de Lima
+Andrés Huamán Quispe; Expreso Pacífico
+José Ramírez Castillo; Municipalidad de Arequipa
+Noelia García Quispe; Buses Metropolitanos
+Hugo Ccori Cárdenas; Ruta Segura
+Sofía Paredes Mamani; Expreso Pacífico
+Juan Aguilar Cárdenas; ATU
+Natalia Quispe Chávez; Municipalidad de Lima
+María Chávez Gutiérrez; Recaudo Digital
+Pedro Flores Mendoza; Municipalidad de Lima
+Jorge Ramírez Rodríguez; Corredor Rojo
+Gabriela Ramírez Peña; Flota Norte SAC
+Iván Espinoza Mendoza; EDSA
+Patricia Zegarra Chávez; Expreso Pacífico
+Daniela Ortiz Rodríguez; Recaudo Digital
+Lucía Zegarra Espinoza; MTC
+Carmen Huamán Ccori; Municipalidad de Lima
+Juan Quispe Huamán; Municipalidad de Arequipa
+Luis Gutiérrez Huamán; Tránsito Inteligente
+Renzo Castillo Valdivia; EDSA
+Silvia Zegarra Benavides; MTC
+Ricardo Benavides Espinoza; Ruta Segura
+Ricardo Zegarra García; EDSA
+Óscar Mendoza Paredes; Municipalidad de Lima
+Ricardo Flores Ríos; MTC
+Gonzalo Paredes Chávez; MTC
+Miguel Valdivia Núñez; Movilidad Andina
+José Sánchez Quispe; EDSA
+Fiorella Quispe Quispe; ATU
+Gonzalo Quispe Quispe; MTC
+Elena Rodríguez Chávez; Recaudo Digital
+Andrés Quispe Salazar; Municipalidad de Arequipa
+Pedro Ramírez Muñoz; Expreso Pacífico
+Ana Rodríguez Ramírez; Recaudo Digital
+Óscar Zegarra Tapia; Ruta Segura
+Carlos Espinoza Torres; EDSA
+Ricardo Chávez Ramírez; Ruta Segura
+Ana Ramírez Ramírez; Buses Metropolitanos
+Paola Rojas Mendoza; Municipalidad de Arequipa
+Ximena Salazar Torres; Buses Metropolitanos
+Hugo Ccori Espinoza; Tránsito Inteligente
+Renzo Tapia Rodríguez; Recaudo Digital
+Ricardo Sánchez Mendoza; MTC
+Rosa Sánchez García; Corredor Rojo
+Diego Rodríguez Espinoza; ATU
+Rosa Flores Cárdenas; Corredor Rojo
+José Paredes Ortiz; Teleflota Perú
+Claudia Paredes Sánchez; Ruta Segura
+Miguel Gutiérrez Mamani; Municipalidad de Lima
+Fiorella García Zegarra; Municipalidad de Arequipa
+Valeria Núñez Cárdenas; EDSA
+Natalia Vargas Muñoz; Municipalidad de Arequipa
+Gonzalo Quispe Flores; Expreso Pacífico
+Gonzalo Chávez Mamani; EDSA
+Fiorella Benavides Flores; MTC
+Jorge Rodríguez Ortiz; Buses Metropolitanos
+Daniela Salazar Espinoza; Municipalidad de Lima
+Rosa Sánchez Peña; Municipalidad de Arequipa
+Lucía Paredes Rodríguez; Corredor Rojo
+Karina Salazar Ríos; EDSA
+Juan Rodríguez Rodríguez; ATU
+Patricia Cárdenas Quispe; MTC
+Valeria Castillo Núñez; Ruta Segura
+Jorge Tapia Flores; Buses Metropolitanos
+Gabriela Rodríguez Cárdenas; Expreso Pacífico
+Karina García García; Recaudo Digital
+Ximena Ccori Zegarra; Municipalidad de Arequipa
+César Torres Benavides; Expreso Pacífico
+Martín Benavides García; EDSA
+Diego Cárdenas Mendoza; Buses Metropolitanos
+Juan Sánchez Sánchez; Corredor Rojo
+Natalia Zegarra Ccori; Municipalidad de Arequipa
+Noelia Ríos Zegarra; Flota Norte SAC
+Carlos Ortiz Torres; Municipalidad de Arequipa
+José Zegarra Benavides; Flota Norte SAC
+Gabriela Paredes Chávez; Flota Norte SAC
+Andrés Castillo Gutiérrez; Teleflota Perú
+Pedro Mamani Peña; Teleflota Perú
+Carmen Quispe Zegarra; Transportes del Sur
+Juan Aguilar Ccori; Municipalidad de Lima
+Juan Paredes Salazar; Recaudo Digital
+Luis Zegarra Gutiérrez; MTC
+Martín Salazar Chávez; MTC
+Patricia Paredes Sánchez; Transportes del Sur
+Patricia Aguilar Huamán; ATU
+César Torres Tapia; Recaudo Digital
+Karina Rodríguez Valdivia; Municipalidad de Arequipa
+Iván Espinoza Valdivia; Ruta Segura
+Claudia Rojas Rodríguez; Ruta Segura
+Valeria García Ramírez; Recaudo Digital
+Silvia Quispe Castillo; Tránsito Inteligente
+Jorge Gutiérrez Núñez; Recaudo Digital
+Víctor Aguilar Flores; Expreso Pacífico
+Elena Quispe Paredes; ATU
+Martín Rodríguez Ccori; Recaudo Digital
+Iván Castillo Flores; Municipalidad de Lima
+Noelia Peña Vargas; EDSA
+Miguel Rojas Castillo; Ruta Segura
+Jorge Ccori Mendoza; Transportes del Sur
+Noelia Gutiérrez Peña; Tránsito Inteligente
+Noelia Muñoz Peña; EDSA
+Claudia Tapia Quispe; Flota Norte SAC
+Fiorella Flores Quispe; Tránsito Inteligente
+Víctor García Aguilar; MTC
+María Rojas Sánchez; Recaudo Digital
+Diego Espinoza Quispe; Ruta Segura
+Fiorella Rojas Tapia; Movilidad Andina
+Karina Salazar Ortiz; MTC
+Gonzalo Castillo Aguilar; Tránsito Inteligente
+Luis Quispe Aguilar; MTC
+Carmen Quispe García; EDSA
+Martín Mendoza Muñoz; EDSA
+Ximena Ccori Benavides; Teleflota Perú
+César Ccori Rojas; ATU
+Raúl Salazar Muñoz; Flota Norte SAC
+José Castillo Quispe; Tránsito Inteligente
+Karina Peña Flores; Flota Norte SAC
+Óscar Rodríguez Mamani; Buses Metropolitanos
+Pedro Sánchez Torres; MTC
+Martín Torres Peña; Buses Metropolitanos
+Silvia Rodríguez Gutiérrez; Ruta Segura
+Daniela Quispe Ortiz; Ruta Segura
+Jorge Chávez Ríos; MTC
+Natalia Paredes Chávez; EDSA
+César Rodríguez Zegarra; EDSA
+Ricardo Zegarra Torres; Ruta Segura
+Pedro Ccori Castillo; Tránsito Inteligente
+Hugo Ríos Sánchez; Ruta Segura
+Andrés Quispe García; Buses Metropolitanos
+Natalia Cárdenas Flores; Corredor Rojo
+Hugo Torres Quispe; Movilidad Andina
+Claudia Tapia Torres; Municipalidad de Lima
+Carmen García Ramírez; Transportes del Sur
+Noelia Ríos Ríos; MTC
+Óscar Ccori Valdivia; Buses Metropolitanos
+Miguel Núñez Rojas; Teleflota Perú
+Pedro Ramírez Valdivia; Tránsito Inteligente
+Paola Gutiérrez Ríos; Municipalidad de Lima
+Carlos Mamani Muñoz; Municipalidad de Lima
+Lucía Zegarra Núñez; Recaudo Digital
+Jorge García Zegarra; Ruta Segura
+Ana Gutiérrez Vargas; Tránsito Inteligente
+Natalia Benavides Gutiérrez; Municipalidad de Lima
+Paola Tapia Paredes; Recaudo Digital
+Renzo Quispe Zegarra; Flota Norte SAC
+Raúl Muñoz Chávez; Flota Norte SAC
+Renzo Benavides Flores; Buses Metropolitanos
+Víctor Ccori García; Municipalidad de Arequipa
+Renzo Ccori Mamani; Expreso Pacífico
+Lucía Rodríguez Torres; Teleflota Perú
+Elena Ccori Núñez; Tránsito Inteligente
+Raúl Salazar Aguilar; EDSA
+Carlos Núñez Chávez; Municipalidad de Lima
+Ximena Rodríguez Ramírez; Transportes del Sur
+Noelia Castillo Quispe; Buses Metropolitanos
+Paola Cárdenas Sánchez; MTC
+Sofía Benavides García; Corredor Rojo
+Noelia Castillo Vargas; Transportes del Sur
+Luis Mamani Tapia; Recaudo Digital
+Lucía Chávez Castillo; Corredor Rojo
+Elena Núñez Rodríguez; Movilidad Andina
+José Mamani Muñoz; Teleflota Perú
+Milagros García Mamani; MTC
+Carlos García Torres; Teleflota Perú
+Gonzalo Ccori Benavides; Municipalidad de Arequipa
+Andrés Peña García; Municipalidad de Lima
+Fiorella Rodríguez Tapia; Buses Metropolitanos
+Hugo García García; EDSA
+Luis Rojas Benavides; Transportes del Sur
+Jorge Gutiérrez Torres; ATU
+Natalia Huamán Valdivia; Corredor Rojo
+Sofía Gutiérrez Torres; Transportes del Sur
